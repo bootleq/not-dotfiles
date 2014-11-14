@@ -9,8 +9,8 @@ source /etc/os-release
 
 if [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "14.04" ]]; then
   # update package list
-  sed -i 's/archive\.ubuntu\.com/ftp\.cuhk\.edu\.hk\/pub\/Linux/g' /etc/apt/sources.list
-  sed -i 's/security\.ubuntu\.com/ftp\.cuhk\.edu\.hk\/pub\/Linux/g' /etc/apt/sources.list
+  sed -i 's/archive\.ubuntu\.com/tw.archive.ubuntu.com/g' /etc/apt/sources.list
+  sed -i 's/security\.ubuntu\.com/tw.archive.ubuntu.com/g' /etc/apt/sources.list
   apt-get update
 
   apt-get -y install python-software-properties
@@ -32,8 +32,8 @@ if [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "14.04" ]]; then
 
 elif [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "12.04" ]]; then
   # update package list
-  sed -i 's/archive\.ubuntu\.com/ftp\.cuhk\.edu\.hk\/pub\/Linux/g' /etc/apt/sources.list
-  sed -i 's/security\.ubuntu\.com/ftp\.cuhk\.edu\.hk\/pub\/Linux/g' /etc/apt/sources.list
+  sed -i 's/archive\.ubuntu\.com/tw.archive.ubuntu.com/g' /etc/apt/sources.list
+  sed -i 's/security\.ubuntu\.com/tw.archive.ubuntu.com/g' /etc/apt/sources.list
   apt-get update
 
   apt-get -y install python-software-properties
