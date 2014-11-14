@@ -21,14 +21,13 @@ if [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "14.04" ]]; then
   export LANG=zh_TW.UTF-8
 
   # install required packages
-  apt-get -y install build-essential git-core tig wget curl htop tmux \
-    rake exuberant-ctags vim-gtk silversearcher-ag zsh
+  apt-get -y install build-essential git-core wget curl \
+    rake zsh
   apt-get -y install nginx postgresql-9.3 postgresql-contrib-9.3 redis-server
   apt-get -y install bison openssl libssl-dev libxslt1.1 libxslt1-dev \
     libxml2 libxml2-dev libffi-dev libyaml-dev autoconf \
     libc6-dev libreadline6-dev zlib1g zlib1g-dev \
     ruby-dev libruby2.0 libsqlite3-dev libpq-dev
-  apt-get -y install cmake python-dev     # dependency of YouCompleteMe vim plugin
 
 elif [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "12.04" ]]; then
   # update package list
@@ -46,7 +45,7 @@ elif [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "12.04" ]]; then
   # get latest repository
   add-apt-repository -y ppa:git-core/ppa
   add-apt-repository -y ppa:fcwu-tw/ppa
-  add-apt-repository -y ppa:kalakris/tmux
+  # add-apt-repository -y ppa:kalakris/tmux
 
   # get latest postgres repository
   wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
@@ -55,20 +54,19 @@ elif [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "12.04" ]]; then
   apt-get update
 
   # install required packages
-  apt-get -y install build-essential git-core tig wget curl htop tmux \
-    rake exuberant-ctags vim-gtk silversearcher-ag zsh
+  apt-get -y install build-essential git-core wget curl \
+    rake zsh
   apt-get -y install nginx postgresql-9.3 postgresql-contrib-9.3 redis-server
   apt-get -y install bison openssl libssl-dev libxslt1.1 libxslt1-dev \
     libxml2 libxml2-dev libffi-dev libyaml-dev libxslt-dev autoconf \
     libc6-dev libreadline6-dev zlib1g zlib1g-dev \
     ruby-dev libopenssl-ruby libsqlite3-dev libpq-dev
-  apt-get -y install cmake python-dev     # dependency of YouCompleteMe vim plugin
 
 elif [[ "$NAME" = "ArchLinux" ]]; then
   # update package list
   pacman -Sy
-  pacman --noconfirm --needed -S base-devel git tig wget curl htop tmux \
-    ruby gvim ctags ack zsh the_silver_searcher
+  pacman --noconfirm --needed -S base-devel git wget curl \
+    ruby zsh
   pacman --noconfirm --needed -S bison openssl libxslt libxml2 libyaml libffi \
     autoconf readline zlib
 
