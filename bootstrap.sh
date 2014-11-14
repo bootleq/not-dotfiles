@@ -101,7 +101,7 @@ make install
 
 if [[ $1 == "vagrant" ]]; then
   # set local timezone
-  echo 'Asia/Hong_Kong' | tee /etc/timezone
+  echo 'Asia/Taipei' | tee /etc/timezone
   dpkg-reconfigure --frontend noninteractive tzdata
 
   # install personalize development environment
