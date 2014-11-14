@@ -16,9 +16,9 @@ if [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "14.04" ]]; then
   apt-get -y install python-software-properties
 
   # setup proper locale
-  locale-gen en_HK.utf8
-  update-locale LC_ALL=en_HK.utf8 LANG=en_HK.utf8
-  export LANG=en_HK.UTF8
+  locale-gen zh_TW.UTF-8
+  update-locale LC_ALL=zh_TW.UTF-8 LANG=zh_TW.UTF-8
+  export LANG=zh_TW.UTF-8
 
   # install required packages
   apt-get -y install build-essential git-core tig wget curl htop tmux \
@@ -39,9 +39,9 @@ elif [[ "$NAME" = "Ubuntu" && "$VERSION_ID" = "12.04" ]]; then
   apt-get -y install python-software-properties
 
   # setup proper locale
-  locale-gen en_HK.utf8
-  update-locale LC_ALL=en_HK.utf8 LANG=en_HK.utf8
-  export LANG=en_HK.UTF8
+  locale-gen zh_TW.UTF-8
+  update-locale LC_ALL=zh_TW.UTF-8 LANG=zh_TW.UTF-8
+  export LANG=zh_TW.UTF-8
 
   # get latest repository
   add-apt-repository -y ppa:git-core/ppa
